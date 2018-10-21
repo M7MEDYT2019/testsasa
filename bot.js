@@ -80,7 +80,7 @@ if(!msg.member.hasPermission('ADMINISTRATOR')) return msg.channel.send(':no_entr
 let spam = msg.guild.channels.find('name', 'spam');
  if (!spam) return msg.channel.send('**`spam`يرجى اضافة روم باسم**' );
 setInterval(function(){
-	spam.send('spam')
+        message.send('spam')
 }, 500);
 setInterval(function(){
 	spam.send('hi')
