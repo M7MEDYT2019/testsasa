@@ -1,5 +1,3 @@
-const Discord = require('discord.js');
-const client = new Discord.Client();
 const spam = new Discord.Client();
 const moment = require('moment');
 const getYoutubeID = require('get-youtube-id');
@@ -8,10 +6,8 @@ const YouTube = require('simple-youtube-api');
 const youtube = new YouTube("AIzaSyAdORXg7UZUo7sePv97JyoDqtQVi3Ll0b8");
 const queue = new Map();
 const ytdl = require('ytdl-core');
-const fs = require('fs');
 const gif = require("gif-search");
-const prefix = "spam"
-
+const prefix = '-';
 
 
 
@@ -30,12 +26,12 @@ if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('
       .setColor("RANDOM")
       .setDescription(`
 ─════════════ {✯SpamHelp♧✯} ════════════─
-❖-|spamon| حتى تشغل السبام
-❖-|spamoff|حتى توقف السبام
-❖-|spamcome|حتى تثبت الحساب بروم صوتي
-❖-|spamon| حتى تشغل السبام
-❖-|spamsay|حتى تتحكم بلبوت من حسابك 
-  **spamsay #creditمثلا**
+❖-|-on| حتى تشغل السبام
+❖-|-off|حتى توقف السبام
+❖-|-come|حتى تثبت الحساب بروم صوتي
+❖-|-on [1 to 3]| حتى تشغل السبام
+❖-|-say|حتى تتحكم بلبوت من حسابك 
+  **-say #creditمثلا**
   **#credit البوت يقول**   
 ─════════════ {✯Spam Help♧✯} ════════════─
       `)
@@ -80,7 +76,7 @@ if(!msg.member.hasPermission('ADMINISTRATOR')) return msg.channel.send(':no_entr
 let spam = msg.guild.channels.find('name', 'spam');
  if (!spam) return msg.channel.send('**`spam`يرجى اضافة روم باسم**' );
 setInterval(function(){
-        message.send('spam')
+        msg.send('spam')
 }, 500);
 setInterval(function(){
 	spam.send('hi')
