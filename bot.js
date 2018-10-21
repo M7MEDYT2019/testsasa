@@ -29,7 +29,7 @@ if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('
 ❖-|-on| حتى تشغل السبام
 ❖-|-off|حتى توقف السبام
 ❖-|-come|حتى تثبت الحساب بروم صوتي
-❖-|-on [1 to 3]| حتى تشغل السبام
+❖-|-on [1~3| حتى تشغل السبام
 ❖-|-say|حتى تتحكم بلبوت من حسابك 
   **-say #creditمثلا**
   **#credit البوت يقول**   
